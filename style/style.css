@@ -1,0 +1,320 @@
+:root {
+  /*==================== THEME ONE ================================*/
+  /*BACKGROUND*/
+  --blue-main-background: hsl(222, 26%, 31%);
+  --blue-toggle-background: hsl(223, 31%, 20%);
+  --blue-screen-background: hsl(224, 36%, 15%);
+  --blue-calculator-background: hsl(224, 36%, 15%);
+
+  /*KEYS*/
+  --light-orange-key-background: hsl(6, 63%, 50%);
+  --light-orange-key-shadow: hsl(6, 70%, 34%);
+  --blue-key-background: hsl(225, 21%, 49%);
+  --blue-key-shadow: hsl(224, 28%, 35%);
+  --light-grayish-orange-key-background: hsl(30, 25%, 89%);
+  --light-grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+  /*TEXT*/
+  --color-text-blue: hsl(221, 14%, 31%);
+  --theme-one-text-color: hsl(0, 0%, 90%);
+}
+
+/*==================== THEME TWO ================================*/
+.theme2 {
+  /*BACKGROUND*/
+  --blue-main-background: hsl(0, 0%, 90%);
+  --blue-toggle-background: hsl(0, 5%, 81%);
+  --blue-screen-background: hsl(0, 0%, 93%);
+  --blue-calculator-background: hsl(0, 5%, 81%);
+
+  /*KEYS*/
+  --light-orange-key-background: hsl(185, 42%, 37%);
+  --light-orange-key-shadow: hsl(185, 58%, 25%);
+  --blue-key-background: hsl(25, 98%, 40%);
+  --blue-key-shadow: hsl(25, 99%, 27%);
+  --light-grayish-orange-key-background: hsl(45, 7%, 89%);
+  --light-grayish-orange-key-shadow: hsl(34, 11%, 61%);
+
+  /*TEXT*/
+  --color-text-blue: hsl(0, 0%, 100%);
+  --theme-one-text-color: hsl(60, 10%, 19%);
+}
+
+.theme3 {
+  /*==================== THEME THREE ================================*/
+  /*BACKGROUND*/
+  --blue-main-background: hsl(268, 75%, 9%);
+  --blue-toggle-background: hsl(268, 71%, 12%);
+  --blue-screen-background: hsl(268, 71%, 12%);
+  --blue-calculator-background: hsl(268, 71%, 12%);
+
+  /*KEYS*/
+  --light-orange-key-background: hsl(268, 47%, 21%);
+  --light-orange-key-shadow: hsl(290, 70%, 36%);
+  --blue-key-background: hsl(281, 89%, 26%);
+  --blue-key-shadow: hsl(285, 91%, 52%);
+  --light-grayish-orange-key-background: hsl(176, 100%, 44%);
+  --light-grayish-orange-key-shadow: hsl(177, 92%, 70%);
+
+  /*TEXT*/
+  --color-text-blue: hsl(179, 100%, 0%);
+  --theme-one-text-color: hsl(52, 100%, 62%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-main-background);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  border: 1px solid brown;
+}
+
+/*=================SECTION HEADER=======================*/
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--theme-one-text-color);
+}
+
+.header h1 {
+  align-self: flex-end;
+}
+
+.themes {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.4rem;
+}
+
+.themes p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.themes__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.themes__labels {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.themes__labels label {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.themes__inputs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 2rem;
+  padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+  background-color: var(--blue-toggle-background);
+}
+
+.themes__inputs input {
+  appearance: none;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 3rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--light-orange-key-background);
+}
+
+/*=================SECTION OUTPUT=======================*/
+
+.output {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  border-radius: 1rem;
+  background: var(--blue-screen-background);
+  color: var(--theme-one-text-color);
+  margin-top: 2rem;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* .output::-webkit-scrollbar {
+  display: none;
+} */
+
+.prevOperand {
+  width: 100%;
+  height: 4rem;
+  font-size: 2.6rem;
+  line-height: 4rem;
+  padding-right: 2.5rem;
+  margin-left: auto;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.currOperand {
+  width: 100%;
+  height: 8rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 8rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+/*=================SECTION CALCULATOR BUTTONS=======================*/
+.btns {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--blue-calculator-background);
+  row-gap: 1.5rem;
+  column-gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+}
+
+.num-btn,
+.operator-btn,
+#del-btn,
+#reset-btn,
+#output-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--light-grayish-orange-key-background);
+  color: var(--color-text-blue);
+  border-radius: 0.8rem;
+  box-shadow: inset 0px -4px 0px var(--light-grayish-orange-key-shadow);
+}
+
+#reset-btn {
+  grid-column: 1 / 3;
+}
+
+#output-btn {
+  grid-column: 3 / 5;
+}
+
+#reset-btn,
+#del-btn,
+#output-btn {
+  color: var(--theme-one-text-color);
+}
+
+#reset-btn,
+#del-btn {
+  background-color: var(--blue-key-background);
+  box-shadow: inset 0px -4px 0px var(--blue-key-shadow);
+}
+
+#output-btn {
+  background-color: var(--light-orange-key-background);
+  box-shadow: inset 0px -4px 0px var(--light-orange-key-shadow);
+}
+
+.num-btn:active,
+.operator-btn:active,
+#del-btn:active,
+#reset-btn:active,
+#output-btn:active {
+  transform: translateY(1.1rem);
+}
+
+/*==================================MEDIA QUERIES=============================================*/
+
+/*=================TABLETS=======================*/
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 70%;
+  }
+  .output {
+    height: 9rem;
+  }
+
+  .prevOperand {
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  .currOperand {
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 4rem;
+  }
+}
+
+/*=================TABLETS=======================*/
+
+@media screen and (max-width: 575px) {
+  .btns {
+    row-gap: 1rem;
+    column-gap: 1rem;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .num-btn,
+  .operator-btn,
+  #del-btn,
+  #reset-btn,
+  #output-btn {
+    border-radius: 0.3rem;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Responsive Calculator</title>
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--=================SECTION HEADER=======================-->
+      <div class="header">
+        <h1>Calc</h1>
+        <div class="themes">
+          <p>theme</p>
+          <div class="themes__container">
+            <div class="themes__labels">
+              <label for="theme-1" id="theme1">1</label>
+              <label for="theme-2" id="theme2">2</label>
+              <label for="theme-3" id="theme3">3</label>
+            </div>
+            <div class="themes__inputs">
+              <input id="theme-1" type="radio" name="theme" />
+              <input id="theme-2" type="radio" name="theme" />
+              <input id="theme-3" type="radio" name="theme" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--=================SECTION OUTPUT=======================-->
+      <div class="output">
+        <div class="prevOperand">66665555555555555555555566666666</div>
+        <div class="currOperand">7788888888888887777777777</div>
+      </div>
+
+      <!--=================SECTION CALCULATOR BUTTONS=======================-->
+      <div class="btns">
+        <div class="num-btn" type="button">7</div>
+        <div class="num-btn" type="button">8</div>
+        <div class="num-btn" type="button">9</div>
+        <div id="del-btn" type="button">DEL</div>
+        <div class="num-btn" type="button">4</div>
+        <div class="num-btn" type="button">5</div>
+        <div class="num-btn" type="button">6</div>
+        <div class="operator-btn" type="button">+</div>
+        <div class="num-btn" type="button">1</div>
+        <div class="num-btn" type="button">2</div>
+        <div class="num-btn" type="button">3</div>
+        <div class="operator-btn" type="button">-</div>
+        <div class="num-btn" type="button">.</div>
+        <div class="num-btn" type="button">0</div>
+        <div class="operator-btn" type="button">/</div>
+        <div class="operator-btn" type="button">x</div>
+        <div id="reset-btn" type="button">RESET</div>
+        <div id="output-btn" type="button">=</div>
+      </div>
+    </div>
+  </body>
+</html>

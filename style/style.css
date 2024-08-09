@@ -199,6 +199,7 @@ input[type="radio"]:checked {
   width: 100%;
   height: 2rem;
   font-size: 1.5rem;
+  font-weight: 400;
   line-height: 2rem;
   padding-right: 1rem;
   margin-left: auto;
@@ -283,15 +284,15 @@ input[type="radio"]:checked {
 
 /*==================================MEDIA QUERIES=============================================*/
 
-/*=================TABLETS=======================*/
-
-@media screen and (min-width: 768px) {
+/*=================SMALL TABLETS=======================*/
+@media screen and (min-width: 644px) {
   .container {
     width: 70%;
   }
 
   .prevOperand {
     height: 3rem;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 3rem;
     padding-right: 2rem;
@@ -304,16 +305,57 @@ input[type="radio"]:checked {
     line-height: 4rem;
     padding-right: 2rem;
   }
+}
 
+/*=================MEDIUM TABLETS=======================*/
+@media screen and (min-width: 760px) {
   .btns {
     padding: 1.2rem;
   }
+
+  .btns {
+    gap: 1rem;
+  }
+
+  .num-btn,
+  .operator-btn,
+  #del-btn,
+  #reset-btn,
+  #output-btn {
+    border-radius: 0.8rem;
+  }
 }
 
-/*==========================LARGE TABLET================================*/
+/*==========================SMALL AND LATGE DESKTOPS================================*/
 
 @media screen and (min-width: 1024px) {
   .container {
-    padding: 0.8rem;
+    width: 60%;
+    padding: 0;
+  }
+
+  .output {
+    border-radius: 0.8rem;
+  }
+
+  .prevOperand {
+    height: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding-right: 2rem;
+  }
+
+  .currOperand {
+    height: 5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 5rem;
+    padding-right: 2rem;
+  }
+
+  .btns {
+    padding: 1rem;
+    gap: 1.3rem;
+    border-radius: 0.8rem;
   }
 }

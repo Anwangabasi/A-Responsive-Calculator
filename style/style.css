@@ -16,7 +16,9 @@
 
   /*TEXT*/
   --color-text-blue: hsl(221, 14%, 31%);
-  --theme-one-text-color: hsl(0, 0%, 90%);
+  --theme-one-text-color: hsl(0, 0%, 100%);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-text-black: hsl(0, 0%, 100%);
 }
 
 /*==================== THEME TWO ================================*/
@@ -28,16 +30,18 @@
   --blue-calculator-background: hsl(0, 5%, 81%);
 
   /*KEYS*/
-  --light-orange-key-background: hsl(185, 42%, 37%);
-  --light-orange-key-shadow: hsl(185, 58%, 25%);
-  --blue-key-background: hsl(25, 98%, 40%);
-  --blue-key-shadow: hsl(25, 99%, 27%);
+  --light-orange-key-background: hsl(25, 98%, 40%);
+  --light-orange-key-shadow: hsl(25, 99%, 27%);
+  --blue-key-background: hsl(185, 42%, 37%);
+  --blue-key-shadow: hsl(185, 58%, 25%);
   --light-grayish-orange-key-background: hsl(45, 7%, 89%);
   --light-grayish-orange-key-shadow: hsl(34, 11%, 61%);
 
   /*TEXT*/
-  --color-text-blue: hsl(0, 0%, 100%);
+  --color-text-blue: hsl(60, 10%, 19%);
   --theme-one-text-color: hsl(60, 10%, 19%);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-text-black: hsl(0, 0%, 100%);
 }
 
 .theme3 {
@@ -49,16 +53,17 @@
   --blue-calculator-background: hsl(268, 71%, 12%);
 
   /*KEYS*/
-  --light-orange-key-background: hsl(268, 47%, 21%);
-  --light-orange-key-shadow: hsl(290, 70%, 36%);
+  --light-orange-key-background: hsl(176, 100%, 44%);
+  --light-orange-key-shadow: hsl(177, 92%, 70%);
   --blue-key-background: hsl(281, 89%, 26%);
   --blue-key-shadow: hsl(285, 91%, 52%);
-  --light-grayish-orange-key-background: hsl(176, 100%, 44%);
-  --light-grayish-orange-key-shadow: hsl(177, 92%, 70%);
+  --light-grayish-orange-key-background: hsl(268, 47%, 21%);
+  --light-grayish-orange-key-shadow: hsl(290, 70%, 36%);
 
   /*TEXT*/
-  --color-text-blue: hsl(179, 100%, 0%);
+  --color-text-blue: hsl(52, 100%, 62%);
   --theme-one-text-color: hsl(52, 100%, 62%);
+  --color-text-black: hsl(198, 20%, 13%);
 }
 
 *,
@@ -250,12 +255,12 @@ input[type="radio"]:checked {
 
 #output-btn {
   grid-column: 3 / 5;
+  color: var(--color-text-black);
 }
 
 #reset-btn,
-#del-btn,
-#output-btn {
-  color: var(--theme-one-text-color);
+#del-btn {
+  color: var(--color-text-white);
 }
 
 #reset-btn,
@@ -281,25 +286,30 @@ input[type="radio"]:checked {
 
 /*=================TABLETS=======================*/
 
-/* @media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .container {
     width: 70%;
-  }
-  .output {
-    height: 9rem;
   }
 
   .prevOperand {
     height: 3rem;
+    font-weight: 400;
     line-height: 3rem;
+    padding-right: 2rem;
   }
 
   .currOperand {
-    height: 6rem;
-    line-height: 6rem;
-    font-size: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    padding-right: 2rem;
   }
-} */
+
+  .btns {
+    padding: 1.2rem;
+  }
+}
 
 /*==========================XTRA SMALL DEVICE================================*/
 
